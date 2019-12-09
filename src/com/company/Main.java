@@ -14,6 +14,8 @@ public class Main {
         Ksiazka book1 = new Ksiazka();
         book1.introduceYourself();
 
+        System.out.println("test1");
+
         new Main().ZapiszDane(film1,film2, "savefile1.obj");
 
         System.out.println("\nOdczyt");
@@ -23,7 +25,7 @@ public class Main {
 
     //method to write object into file
     public int ZapiszDane(Film film1,Film film2, String fileName){
-        ObjectOutputStream strumien_zapis = null;
+        ObjectOutputStream strumien_zapis;
 
         try{
             strumien_zapis = new ObjectOutputStream(new FileOutputStream(fileName));
@@ -40,13 +42,13 @@ public class Main {
 
     public void CzytajDane(String fileName){
 
-        ObjectInputStream strumien_odczyt = null;
+        ObjectInputStream strumien_odczyt;
 
         try{
             strumien_odczyt = new ObjectInputStream(new FileInputStream(fileName));
 
-            Object obj = null;
-            Film filmTest = new Film("a", "b", 1, new String[]{"c"});
+            Object obj;
+            Film filmTest;
 
             while((obj = strumien_odczyt.readObject()) != null){
                 if(obj instanceof Film){
