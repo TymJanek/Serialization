@@ -14,7 +14,7 @@ public class Main {
         Ksiazka book1 = new Ksiazka();
         book1.introduceYourself();
 
-        System.out.println("test1");
+        System.out.println("test2");
 
         new Main().ZapiszDane(film1,film2, "savefile1.obj");
 
