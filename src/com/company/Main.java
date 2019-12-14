@@ -29,7 +29,6 @@ public class Main {
         new Main().ZapiszDane(listOfFilmsAndBooks, "savefile1.obj");
 
         //odczyt z pliku obiektowego tablicy obiektów
-        System.out.println("\nOdczyt");
         new Main().CzytajDane("savefile1.obj");
 
 
@@ -51,20 +50,18 @@ public class Main {
     }
 
     //metoda zapisująca tablicę klasy Object zawierająca obiekty klasy Film i Ksiazka do pliku obiektowego
-    public int ZapiszDane(Object[] listOfFilmsAndBooks, String fileName){
+    public void ZapiszDane(Object[] listOfFilmsAndBooks, String fileName){
         ObjectOutputStream strumien_zapis;
 
         try{
             strumien_zapis = new ObjectOutputStream(new FileOutputStream(fileName));
-            for(int i=0; i<listOfFilmsAndBooks.length; i++){
+            for(int i=0; i<listOfFilmsAndBooks.length; i++){            //pętla zapisująca wszystkie obiekty z tablicy do strumienia do pliku obiektowgo
                 strumien_zapis.writeObject(listOfFilmsAndBooks[i]);
             }
-            return 0;
         }
 
         catch(Exception e){
             e.printStackTrace();
-            return -1;
         }
     }
 
