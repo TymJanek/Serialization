@@ -1,6 +1,8 @@
 package com.company;
 
-public class Ksiazka {
+import java.io.Serializable;
+
+public class Ksiazka implements Serializable {
 
     private String title;
     private String author;
