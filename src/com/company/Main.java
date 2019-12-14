@@ -28,13 +28,14 @@ public class Main {
         //zapis tablicy obiektów (listOfFilmsAndBooks) do pliku obiektowego (savefile1.obj)
         new Main().ZapiszDane(listOfFilmsAndBooks, "savefile1.obj");
 
+        //odczyt z pliku obiektowego tablicy obiektów
         System.out.println("\nOdczyt");
-
         new Main().CzytajDane("savefile1.obj");
 
 
     }
 
+    //metoda zapisująca obiekt klasy Film do pliku obiektowgo
     public int ZapiszFilm(Film film, String fileName){
         ObjectOutputStream strumien_zapis;
 
