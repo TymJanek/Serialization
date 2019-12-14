@@ -30,8 +30,6 @@ public class Main {
 
         //odczyt z pliku obiektowego tablicy obiektów
         new Main().CzytajDane("savefile1.obj");
-
-
     }
 
     //metoda zapisująca obiekt klasy Film do pliku obiektowgo
