@@ -29,10 +29,11 @@ public class Main {
         new Main().ZapiszDane(listOfFilmsAndBooks, "savefile1.obj");
 
         //odczyt z pliku obiektowego tablicy obiektów
+        System.out.println();
         new Main().CzytajDane("savefile1.obj");
     }
 
-    //metoda zapisująca obiekt klasy Film do pliku obiektowgo
+    //metoda zapisująca obiekt klasy Film do pliku obiektowego
     public int ZapiszFilm(Film film, String fileName){
         ObjectOutputStream strumien_zapis;
 
@@ -76,11 +77,11 @@ public class Main {
 
             while((obj = strumien_odczyt.readObject()) != null){
                 if(obj instanceof Film){
-                    temp = (Film)obj;
+                    temp = obj;
                     System.out.println("Film: " + ((Film) temp).getTitle() + " " + ((Film) temp).getDirector() + " " + ((Film) temp).getProductionYear());
                 }
                 else if(obj instanceof Ksiazka){
-                    temp = (Ksiazka)obj;
+                    temp = obj;
                     System.out.println("Książka: " + ((Ksiazka) temp).getAuthor() + " " +  ((Ksiazka) temp).getTitle());
                 }
             }
