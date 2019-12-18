@@ -75,16 +75,15 @@ public class Main {
             strumien_odczyt = new ObjectInputStream(new FileInputStream(fileName));
 
             Object obj;
-            Object temp;
 
             while((obj = strumien_odczyt.readObject()) != null){
                 if(obj instanceof Film){
-                    temp = obj;
-                    System.out.println("Film: " + ((Film) temp).getTitle() + " " + ((Film) temp).getDirector());
+
+                    System.out.println("Film: " + ((Film) obj).getTitle() + " " + ((Film) obj).getDirector());
                 }
                 else if(obj instanceof Ksiazka){
-                    temp = obj;
-                    System.out.println("Książka: " + ((Ksiazka) temp).introduceYourself());
+
+                    System.out.println("Książka: " + ((Ksiazka) obj).introduceYourself());
                 }
             }
 
