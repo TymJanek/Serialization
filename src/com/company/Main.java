@@ -22,6 +22,8 @@ public class Main {
         //odczyt filmu
         new Main().CzytajDane("savefilm.obj");
 
+        //test
+
         //tablica klasy Object z obiektami klasy Film oraz Ksiazka
         Object[] listOfFilmsAndBooks = new Object[] {film1, film2, film3, book1, book2, book3};
 
