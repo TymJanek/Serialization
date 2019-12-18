@@ -74,7 +74,7 @@ public class Ksiazka implements Serializable {
         this.genre = copy.genre;
     }
 
-    public void introduceYourself(){
-        System.out.println(getTitle() + " " + getAuthor() + " " + getReleaseYear() + " " + getPages() + " " + getGenre());
+    public String introduceYourself(){
+        return (getTitle() + " " + getAuthor() + " " + getReleaseYear() + " " + getPages() + " " + getGenre());
     }
 }

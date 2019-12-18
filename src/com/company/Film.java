@@ -66,10 +66,8 @@ public class Film implements Serializable {
         this.actors = copy.actors;
     }
 
-    public void introduceYourself(){
-        System.out.println(getTitle() + " " + getDirector() + " " + getProductionYear() + " " + Arrays.toString(getActors()));
+    public String introduceYourself(){
+        return (getTitle() + " " + getDirector() + " " + getProductionYear() + " " + Arrays.toString(getActors()));
     }
-
-
 
 }

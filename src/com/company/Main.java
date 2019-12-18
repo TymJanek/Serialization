@@ -78,11 +78,11 @@ public class Main {
             while((obj = strumien_odczyt.readObject()) != null){
                 if(obj instanceof Film){
                     temp = obj;
-                    System.out.println("Film: " + ((Film) temp).getTitle() + " " + ((Film) temp).getDirector() + " " + ((Film) temp).getProductionYear());
+                    System.out.println("Film: " + ((Film) temp).getTitle() + " " + ((Film) temp).getDirector());
                 }
                 else if(obj instanceof Ksiazka){
                     temp = obj;
-                    System.out.println("Książka: " + ((Ksiazka) temp).getAuthor() + " " +  ((Ksiazka) temp).getTitle());
+                    System.out.println("Książka: " + ((Ksiazka) temp).introduceYourself());
                 }
             }
 
