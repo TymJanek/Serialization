@@ -38,6 +38,7 @@ public class Lekarstwa implements Serializable {
         this.refundacja = refundacja;
     }
 
+    //metoda dzięki której nazwy leków zapisywane są w sposób: 1-sza litera wielka, reszta małe
     private String[] changeLetterCase(String[] nazwa){
         for(int i=0; i< nazwa.length; i++){
             String temp = "";
@@ -56,6 +57,7 @@ public class Lekarstwa implements Serializable {
         return nazwa;
     }
 
+    //metoda Cena zwracająca cenę leku po refundacji(jeśli pacjent jest ubezpieczony)
     public double Cena(String lek, boolean ubezpieczony) {
         int i;
         for(i = 0; i < this.nazwa.length-1; i++) {
@@ -69,6 +71,7 @@ public class Lekarstwa implements Serializable {
         }
     }
 
+    //metoda zwracająca sumaryczny koszt wszystkich leków
     public double kosztCalkowity(){
         double result = 0;
         for(int i=0; i<nazwa.length; i++){
@@ -77,12 +80,14 @@ public class Lekarstwa implements Serializable {
         return result;
     }
 
+    //metoda wyświetlająca informacje o leku
+    public void wyswietl(){
+        System.out.println("Nazwy leków: " + Arrays.toString(getNazwa()) + ", ceny leków: " + Arrays.toString(getCena()) + ", refundacja: " + Arrays.toString(getRefundacja()));
+    }
+
     @Override
     public String toString(){
         return "Nazwy leków: " + Arrays.toString(getNazwa()) + ", ceny leków: " + Arrays.toString(getCena()) + ", refundacja: " + Arrays.toString(getRefundacja());
     }
 
-    public void wyswietl(){
-        System.out.println("Nazwy leków: " + Arrays.toString(getNazwa()) + ", ceny leków: " + Arrays.toString(getCena()) + ", refundacja: " + Arrays.toString(getRefundacja()));
-    }
 }

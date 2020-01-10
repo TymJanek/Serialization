@@ -50,6 +50,7 @@ public class Ksiazka implements Serializable {
         this.genre = genre;
     }
 
+    //konstruktor domyślny
     public Ksiazka(){
         this.title = "Altered Carbon";
         this.author = "Richard K.Morgan";
@@ -58,6 +59,7 @@ public class Ksiazka implements Serializable {
         this.genre = "Cyberpunk novel";
     }
 
+    //konstruktor
     public Ksiazka(String title, String author, int releaseYear, int pages, String genre) {
         this.title = title;
         this.author = author;
@@ -66,6 +68,7 @@ public class Ksiazka implements Serializable {
         this.genre = genre;
     }
 
+    //konstruktor kopiujący
     public Ksiazka(Ksiazka copy){
         this.title = copy.title;
         this.author = copy.author;
@@ -74,6 +77,7 @@ public class Ksiazka implements Serializable {
         this.genre = copy.genre;
     }
 
+    //metoda zwracająca informacje o ksiazce
     public String introduceYourself(){
         return (getTitle() + " " + getAuthor() + " " + getReleaseYear() + " " + getPages() + " " + getGenre());
     }

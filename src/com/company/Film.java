@@ -42,7 +42,7 @@ public class Film implements Serializable {
         this.actors = actors;
     }
 
-    //default
+    //konstruktor domyślny
     public Film(){
         this.title = "Interstellar";
         this.director = "Christopher Nolan";
@@ -50,7 +50,7 @@ public class Film implements Serializable {
         this.actors = new String[]{"Ellen Burstyn", "Matthew McConaughey", "Mackenzie Foy"};
     }
 
-    //with parameters
+    //konstruktor
     public Film(String title, String director, int productionYear, String[] actors) {
         this.title = title;
         this.director = director;
@@ -58,7 +58,7 @@ public class Film implements Serializable {
         this.actors = actors;
     }
 
-    //copy constructor
+    //konstruktor kopiujący
     public Film(Film copy){
         this.title = copy.title;
         this.director = copy.director;
@@ -66,6 +66,7 @@ public class Film implements Serializable {
         this.actors = copy.actors;
     }
 
+    //metoda zwracająca informacje o filmie
     public String introduceYourself(){
         return (getTitle() + " " + getDirector() + " " + getProductionYear() + " " + Arrays.toString(getActors()));
     }
